@@ -19,7 +19,7 @@
         "ext-pcntl": "*"
     },
     "autoload": {
-        "PSR-4": {
+        "psr-4": {
             "App\\": "src/Application",
             "App\\Tests": "src/tests"
         }
