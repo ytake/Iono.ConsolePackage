@@ -1,0 +1,28 @@
+{
+    "name": "iono/iono",
+    "description": "php cli application",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "keywords": ["console", "php", "cli"],
+    "authors": [
+        {
+            "name": "yuuki.takezawa",
+            "email": "yuuki.takezawa@comnect.jp.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-opcache": "*"	,
+        "comnect/console": "dev-master"
+    },
+    "suggest": {
+        "ext-pcntl": "*"
+    },
+    "autoload": {
+        "PSR-4": {
+            "App\\": "src/Application",
+            "App\\Tests": "src/tests"
+        }
+    },
+    "prefer-stable": true
+}
