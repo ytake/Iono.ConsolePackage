@@ -5,7 +5,7 @@ require __DIR__ . "/vendor/autoload.php";
 /**
  * initialize
  */
-require __DIR__ . "/src/bootstrap/ini.php";
+require __DIR__ . "/bootstrap/ini.php";
 
 /**
  * application start

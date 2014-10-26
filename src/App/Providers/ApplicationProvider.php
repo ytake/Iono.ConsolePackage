@@ -1,12 +1,12 @@
 <?php
-namespace App\Console;
+namespace App\Providers;
 
 use Iono\Console\Application\Provider;
 use Iono\Console\Application\Annotation\Provide;
 
 /**
  * Class ApplicationProvider
- * @package App\Console\Provider
+ * @package App\Console\Providers
  * @Provide
  */
 class ApplicationProvider extends Provider
@@ -18,7 +18,7 @@ class ApplicationProvider extends Provider
      */
     public function register()
     {
-
+        $this->container->bind("App\Repositories\RepositoryInterface", "App\Repositories\User");
     }
 
 }

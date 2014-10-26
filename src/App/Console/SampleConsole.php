@@ -2,6 +2,7 @@
 namespace App\Console;
 
 use Iono\Console\Application;
+use App\Repositories\RepositoryInterface;
 
 /**
  * Class SampleConsole
@@ -18,9 +19,17 @@ class SampleConsole extends Application
     /** @var  string */
     protected $description = "sample application";
 
-    public function __construct()
-    {
+    /** @var RepositoryInterface  */
+    protected $repository;
 
+    /**
+     * construct injection sample
+     * @param RepositoryInterface $repository
+     * @see App\Providers\ApplicationProvider
+     */
+    public function __construct(RepositoryInterface $repository)
+    {
+        $this->repository = $repository;
     }
 
     /**
@@ -31,8 +40,9 @@ class SampleConsole extends Application
     {
         // use configure component
         $config = $this->config->get('config');
-        // use db component
-        $connection = $this->db->connection();
+        // use binding
+        print_r($this->repository->all());
 
+        print_r($this->repository->getDbComponent());
     }
 }

@@ -5,6 +5,6 @@
 return [
 
     // application's namespace
-    'namespace' => "Console",
+    'namespace' => "App\Console",
 
 ];
