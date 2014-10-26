@@ -5,7 +5,7 @@ php console application package(beta)
 #Installation
 **require php >= 5.4**
 ```bash
-$ composer create-project iono/console your-projectName --prefer-dist
+$ composer create-project iono/console your-projectName dev-master --prefer-dist
 ```
 
 #Usage
