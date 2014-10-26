@@ -1,7 +1,10 @@
 <?php
 /**
- * configure file
+ * application configure
  */
-return array(
-	//something
-);
+return [
+
+    // application's namespace
+    'namespace' => "Console",
+
+];

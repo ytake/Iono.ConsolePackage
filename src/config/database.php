@@ -1,36 +1,48 @@
 <?php
 /**
- * database connection
- * supports four database systems: MySQL, Postgres, SQLite, and SQL Server.
+ * database configure
+ * @see \Iono\Console\Application\Component\DataStorage\Db
  */
-return array(
-	
-	/*
-	|--------------------------------------------------------------------------
-	| Database Connections
-	|--------------------------------------------------------------------------
-	*/
-	'connections' => array(
-		'master' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
-			'username'  => 'username',
-			'password'  => 'password',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_general_ci',
-			'prefix'    => '',
-		),
+return [
 
-		'slave' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
-			'username'  => 'username',
-			'password'  => 'password',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_general_ci',
-			'prefix'    => '',
-		),
-	)
-);
+    'db' => [
+        /** Fetch Style */
+        'fetch' => \PDO::FETCH_CLASS,
+
+        'master' => [
+            "driver"   => "pdo_mysql",
+            "host"     => "localhost",
+            "user"     => "user",
+            "password" => "password",
+            "dbname"   => "dbname",
+            "charset"  => "utf8",
+        ],
+
+        'slave' => [
+            "driver"   => "pdo_mysql",
+            "host"     => "localhost",
+            "user"     => "user",
+            "password" => "password",
+            "dbname"   => "dbname",
+            "charset"  => "utf8",
+        ],
+    ],
+
+    'redis' => [
+        'cluster' => false,
+        'default' => [
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'database' => 0,
+            'password' => null,
+        ],
+    ],
+/* under construct
+    'riak' => [
+        'default' => [
+            'host'     => '127.0.0.1',
+            'port'     => 8098,
+        ],
+    ]
+*/
+];
