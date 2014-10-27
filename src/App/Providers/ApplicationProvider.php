@@ -2,12 +2,12 @@
 namespace App\Providers;
 
 use Iono\Console\Application\Provider;
-use Iono\Console\Application\Annotation\Provide;
+use Iono\Console\Application\Annotation\Component;
 
 /**
  * Class ApplicationProvider
  * @package App\Console\Providers
- * @Provide
+ * @Component
  */
 class ApplicationProvider extends Provider
 {
